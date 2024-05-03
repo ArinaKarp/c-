@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.18)
+project("hello")
+set(SOURCE hello.cpp hello_func.cpp)
+set(HEADER hello_func.hpp)
+add_executable(hello ${SOURCE} ${HEADER})
+# add_executable(hello hello.cpp hello_func.cpp hello_func.hpp)
