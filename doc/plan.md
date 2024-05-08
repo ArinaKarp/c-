@@ -5,18 +5,6 @@
 5. github
 ======
 
-*_
-    | 
-    ___ src
-            | 
-            ___ taskName1
-            |
-            ___ taskName2
-    |
-    ___ docs
-
-=======
-
 https://www.bogotobogo.com/cplusplus/memoryallocation.php
 https://en.wikipedia.org/wiki/Data_segment
 
@@ -24,19 +12,26 @@ https://en.wikipedia.org/wiki/Data_segment
 2. arrays. static + dinamic array
 3. pointers and addresses
 
+========
+
+https://cpp-python-nsu.inp.nsk.su/textbook/sec3/ch4
+https://metanit.com/cpp/tutorial/4.6.php
+
+1. functions, pass arguments to functions
+https://metanit.com/cpp/tutorial/5.1.php
+2. structures + classes: incapsulation, inheritance, polymorphism. 
 
 ========
 
-1. functions, pass arguments to functions
-2. structures
-3. classes
+1. templates
+2. stl containers
+3. cpp standarts 
 
+========
 
+1. Treads 
+2. Mutex
 
-templates
+========
 
-stl
-
-coredumps
-
-cpp standarts 
+Beginning of project

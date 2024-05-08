@@ -13,6 +13,9 @@ https://en.wikipedia.org/wiki/Data_segment
 
 https://habr.com/ru/articles/265509/
 
+Полный туториал по с++ (без многопоточки)
+https://metanit.com/cpp/tutorial/
+
 # Usefull 
 https://godbolt.org/
 
