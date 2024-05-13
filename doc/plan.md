@@ -12,6 +12,8 @@ https://en.wikipedia.org/wiki/Data_segment
 2. arrays. static + dinamic array
 3. pointers and addresses
 
+ДЗ: задача на литкоде twoSum
+
 ========
 
 https://cpp-python-nsu.inp.nsk.su/textbook/sec3/ch4
@@ -21,17 +23,17 @@ https://metanit.com/cpp/tutorial/4.6.php
 https://metanit.com/cpp/tutorial/5.1.php
 2. structures + classes: incapsulation, inheritance, polymorphism. 
 
+ДЗ: реализовать паттерн стратегия
+
 ========
 
 1. templates
 2. stl containers
-3. cpp standarts 
+3. cpp standarts, C++11, lambdas, auto, unique_ptr, shared_ptr
+4. что такое паттерн Декоратор
 
+ДЗ: подключиться к бд sqlite и прочитать "select * from test_messages;" через интерфейс С++ или любую его обертку
 ========
 
-1. Treads 
-2. Mutex
-
-========
 
 Beginning of project
