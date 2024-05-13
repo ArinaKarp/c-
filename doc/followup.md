@@ -16,6 +16,10 @@ https://habr.com/ru/articles/265509/
 Полный туториал по с++ (без многопоточки)
 https://metanit.com/cpp/tutorial/
 
+Справочник с упражнениями от яндекса
+https://education.yandex.ru/handbook/cpp
+
+
 # Usefull 
 https://godbolt.org/
 

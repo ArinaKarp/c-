@@ -27,13 +27,27 @@ https://metanit.com/cpp/tutorial/5.1.php
 
 ========
 
+https://education.yandex.ru/handbook/cpp/article/templates
 1. templates
+https://metanit.com/cpp/tutorial/7.1.php --> вся глава
 2. stl containers
+https://habr.com/ru/articles/182920/
+https://metanit.com/cpp/tutorial/11.1.php
+https://metanit.com/cpp/tutorial/11.2.php
+https://metanit.com/cpp/tutorial/15.3.php
 3. cpp standarts, C++11, lambdas, auto, unique_ptr, shared_ptr
 4. что такое паттерн Декоратор
 
-ДЗ: подключиться к бд sqlite и прочитать "select * from test_messages;" через интерфейс С++ или любую его обертку
+ДЗ: подключиться к бд sqlite и прочитать "select * from test_messages;" через интерфейс С++ или любую его обертку. 
+Доп: В коде использовать std::unique_ptr для объекта подключения к бд
+Доп2: Отключение от бд сделать через кастомный деструктор std::unique_ptr
 ========
 
+1. Boost, asio
+2. Разобрать пример синхронного кода
+3. Разобрать асинхронный код
 
-Beginning of project
+ДЗ: 
+1. Простой вариант чата с синхронной отправкой/передачей сообщений
+2. Простой вариант чата с асинхронной отправкой/передачей сообщений
+"простой вариант" предполагает, что ip получателя и отправителя известны и захардкожены или внесены в конфигурационный файл (вариант с конфигурационным файлом предпочтительнее)
