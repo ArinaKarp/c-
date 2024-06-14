@@ -63,6 +63,10 @@ https://cpp-kt.github.io/cpp-notes/26_multithreading.html
 
 ==========
 
+https://www.boost.org/doc/libs/1_85_0/doc/html/boost_asio/examples.html
+https://www.boost.org/doc/libs/1_41_0/doc/html/boost_asio/using.html
+https://blog.skillfactory.ru/glossary/asinhronnoe-programmirovanie/
+https://habr.com/ru/articles/192284/
 1. Boost, asio
 2. Разобрать пример синхронного кода
 3. Разобрать асинхронный код

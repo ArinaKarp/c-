@@ -22,6 +22,9 @@ https://education.yandex.ru/handbook/cpp
 Исчерпывающая статья про многопоточность в C++
 https://habr.com/ru/companies/otus/articles/549814/
 
+Обучающие материалы по Boost asio на хабре
+https://habr.com/ru/articles/192284/
+
 
 # Usefull 
 https://godbolt.org/
