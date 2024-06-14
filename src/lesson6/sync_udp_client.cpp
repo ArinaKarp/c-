@@ -4,6 +4,7 @@
 #include <boost/shared_ptr.hpp>
 #include <boost/enable_shared_from_this.hpp>
 #include <iostream>
+#include <thread>
 using namespace boost::asio;
 io_service service;
 
@@ -24,10 +25,14 @@ void sync_echo(const std::string &msg) {
 int main(int argc, char* argv[]) {
     // connect several clients
     std::vector<std::string> messages = { "John says hi", "so does James", "Lucy just got home"};
-    boost::thread_group threads;
     for (auto &message : messages) {
-        threads.create_thread( boost::bind(sync_echo, message));
-        boost::this_thread::sleep( boost::posix_time::millisec(100));
+      sync_echo(message);
     }
-    threads.join_all();
+    // boost::thread_group threads;
+
+    // for (auto &message : messages) {
+    //     threads.create_thread( boost::bind(sync_echo, message));
+    //     boost::this_thread::sleep( boost::posix_time::millisec(100));
+    // }
+    // threads.join_all();
 }
