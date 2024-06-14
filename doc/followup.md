@@ -28,6 +28,12 @@ https://habr.com/ru/articles/192284/
 BOOST Asio tutorial
 https://www.boost.org/doc/libs/1_85_0/doc/html/boost_asio.html
 
+Про condition_variable
+https://radioprog.ru/post/1410
+
+Про std::atomic
+https://habr.com/ru/companies/piter/articles/670456/
+
 
 # Usefull 
 https://godbolt.org/
