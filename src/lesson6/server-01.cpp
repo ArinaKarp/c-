@@ -11,10 +11,7 @@ void communicate(tcp::socket& socket) {
             // Сервер получает сообщение от клиента
             boost::asio::streambuf buf;
             boost::asio::read_until(socket, buf, "\n");
-            std::istream is(&buf);
-            std::string client_message;
-            std::getline(is, client_message);
-            std::cout << "Сообщение клиента: " << client_message << std::endl;
+            std::cout << "Сообщение клиента: " << &buf << std::endl;
 
             // Сервер отправляет сообщение клиенту
             std::cout << "Сервер введите сообщение: ";
