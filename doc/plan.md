@@ -77,3 +77,20 @@ https://habr.com/ru/articles/192284/
 "простой вариант" предполагает, что ip получателя и отправителя известны и захардкожены или внесены в конфигурационный файл (вариант с конфигурационным файлом предпочтительнее)
 
 ==========
+
+основной источник: https://www.youtube.com/watch?v=7FQwAjELMek&list=WL&index=109
+материалы : https://github.com/vinniefalco/CppCon2018
+https://www.boost.org/doc/libs/1_67_0/libs/beast/doc/html/index.html
+
+рассматриваем websocket + boost.beast
+
+1. что такое websocket отличие от http
+https://habr.com/ru/sandbox/171066/
+https://blog.skillfactory.ru/glossary/websocket/
+https://appmaster.io/ru/blog/veb-soket-protiv-traditsionnogo-http
+2. что за зверь boost.beast
+https://www.boost.org/doc/libs/1_67_0/libs/beast/doc/html/beast/using_websocket.html
+3. рисуем схему того, как будет работать наш чат. Схема для сервера и клиента: https://disk.astralinux.ru/s/pN5d9KFdK3mdAY8
+
+дз: реализовать сервер, который будет работать с этим клиентом: https://www.boost.org/doc/libs/1_81_0/libs/beast/example/websocket/server/chat-multi/chat_client.html
+
