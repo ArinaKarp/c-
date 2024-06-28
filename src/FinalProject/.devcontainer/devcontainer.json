@@ -1,0 +1,13 @@
+{
+    "image": "gcc:latest",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-vscode.cpptools-extension-pack",
+                "ms-vscode.cmake-tools"
+            ]
+        }
+    },
+    
+    "postCreateCommand": "apt update && apt install cmake libboost-dev -y"
+}

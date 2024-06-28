@@ -1,0 +1,10 @@
+{
+    "configurations": [{
+        "name": "(gdb) Launch",
+        "type": "cppdbg",
+        "request": "launch",
+        "program": "${workspaceRoot}/build/async_server_example",
+        "args": ["0.0.0.0", "8080"],
+        "cwd": "${fileDirname}",
+    }]
+}

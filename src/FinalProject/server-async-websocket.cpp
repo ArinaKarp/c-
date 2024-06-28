@@ -48,7 +48,9 @@ class session : public std::enable_shared_from_this<session> //std::enable_share
     websocket::stream<beast::tcp_stream> ws_; // создан обьект ws_  для хранения и управления состоянием WebSocket соединения
     beast::flat_buffer buffer_; // создается обьект buffer_ для хранения данных, поступающих и отправляемых по WebSocket соединению.
 
+
 public:
+
     // Take ownership of the socket
     explicit                    // explicit запрещает неявные преобразования типов. Это значит, что объекты класса должны быть созданы явно.
     session(tcp::socket&& socket)
@@ -130,7 +132,14 @@ public:
             return fail(ec, "read"); // В случае ошибки чтения выводим сообщение и завершаем выполнение метода
 
         //  Эхо-ответ на полученное сообщение
+
         ws_.text(ws_.got_text()); // Определяем формат сообщения
+        /**
+         * for (session s : контейнер сессий) {
+         *        
+                s_.async_write   
+         * }
+        */
         ws_.async_write(
             buffer_.data(),
             beast::bind_front_handler(
@@ -238,7 +247,9 @@ private:
         else
         {
 
-            std::make_shared<session>(std::move(socket))->run(); // Создаем новую сессию и запускаем ее
+            auto current_session = std::make_shared<session>(std::move(socket)); 
+            current_session->run();     // Создаем новую сессию и запускаем ее
+            // Сохранить current_session в контейнер с сессиями
         }
 
 
@@ -251,35 +262,33 @@ private:
 int main(int argc, char* argv[])
 {
     // Проверяем аргументы командной строки
-    if (argc != 4)
+    if (argc != 3)
     {
         std::cerr <<
-            "Usage: websocket-server-async <address> <port> <threads>\n" <<
+            "Usage: websocket-server-async <address> <port>\n" <<
             "Example:\n" <<
-            "    websocket-server-async 0.0.0.0 8080 1\n";
+            "    websocket-server-async 0.0.0.0 8080\n";
         return EXIT_FAILURE;
     }
     auto const address = net::ip::make_address(argv[1]);  // Получаем адрес для прослушивания
     auto const port = static_cast<unsigned short>(std::atoi(argv[2])); // Получаем порт для прослушивания
-    auto const threads = std::max<int>(1, std::atoi(argv[3]));  // Количество потоков для работы сервера
-
     //Создаем io_context для всех операций ввода/вывода
-    net::io_context ioc{threads};
+    net::io_context ioc;
 
     //  Создаем и запускаем прослушивающий порт
     std::make_shared<listener>(ioc, tcp::endpoint{address, port})->run();
 
-    // Запускаем io_context с указанным числом потоков
-    std::vector<std::thread> v; // Создаем вектор для хранения объектов потоков
-    v.reserve(threads - 1); // Резервируем место в векторе для (threads - 1) потоков
-    for(auto i = threads - 1; i > 0; --i)
-        v.emplace_back(
-        [&ioc]
-        {
-            ioc.run(); // Запускаем главный поток для выполнения io_context
-        });
     ioc.run();
 
     return EXIT_SUCCESS; // Успешно завершаем
 
 }
+
+/**
+ * 
+ * 1. Хранить сессии
+ * 2. Удалять сессии если if(ec == websocket::error::closed) или fail()
+ * 3. Отправлять ответы в цикле по всем сессиям
+ * 4. 
+ * 
+*/

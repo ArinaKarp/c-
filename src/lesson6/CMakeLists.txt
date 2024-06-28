@@ -9,7 +9,8 @@ SET(CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS} " -pthread -lboost_system -lboost_thread"
 
 
 # add_executable(chat chat-test.cpp)
-add_executable(client client_no_resolve.cpp)
-add_executable(server server-01.cpp)
+# add_executable(client client_no_resolve.cpp)
+# add_executable(server server-01.cpp)
+add_executable(async_server server-async-websocket.cpp)
 
 #add_executable(server sync_udp_server.cpp)

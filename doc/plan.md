@@ -96,4 +96,7 @@ https://www.boost.org/doc/libs/1_67_0/libs/beast/doc/html/beast/using_websocket.
 
 ===========
 
-рассказать подробно как дебажить с параметрами с помощью launch.json
+как дебажить с параметрами с помощью launch.json и settings.json
+
+использование дев контейнеров
+https://code.visualstudio.com/docs/devcontainers/create-dev-container
