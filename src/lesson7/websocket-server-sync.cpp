@@ -43,15 +43,12 @@ do_session(tcp::socket& socket)
         {
             // This buffer will hold the incoming message
             boost::beast::multi_buffer buffer;
-
+            boost::beast::ostream(buffer) << "From server:";
             // Read a message
             ws.read(buffer);
-
             // Echo the message back
             ws.text(ws.got_text());
             ws.write(buffer.data());
-
-            buffer.consume(buffer.size());
         }
     }
     catch(boost::system::system_error const& se)

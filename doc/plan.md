@@ -94,3 +94,6 @@ https://www.boost.org/doc/libs/1_67_0/libs/beast/doc/html/beast/using_websocket.
 
 дз: реализовать сервер, который будет работать с этим клиентом: https://www.boost.org/doc/libs/1_81_0/libs/beast/example/websocket/server/chat-multi/chat_client.html
 
+===========
+
+рассказать подробно как дебажить с параметрами с помощью launch.json
