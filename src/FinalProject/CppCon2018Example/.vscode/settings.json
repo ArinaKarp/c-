@@ -1,0 +1,9 @@
+{
+    "cmake.debugConfig": {
+        "args": ["0.0.0.0", "8080"]
+    },
+    "files.associations": {
+        ".clang-tidy": "markdown",
+        "functional": "cpp"
+    }
+}
